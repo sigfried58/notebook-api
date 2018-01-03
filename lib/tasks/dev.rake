@@ -10,5 +10,16 @@ namespace :dev do
       )
     end
     puts 'Contacts successfully added'
+
+    puts 'Add types of contacts...'
+    kinds = %w(Amigo Comercial Conocido)
+
+    kinds.each do |kind|
+      Kind.create!(
+        description: kind
+      )
+    end
+
+    puts 'Types contacts successfully added'
   end
 end
