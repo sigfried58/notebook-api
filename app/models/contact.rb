@@ -1,6 +1,19 @@
 class Contact < ApplicationRecord
+  # Asociaciones
   belongs_to :kind #, optional: true
+  has_many :phones
 
+  # def birthdate_es
+  #   I18n.l(self.birthdate) unless self.birthdate.blank?
+  # end
+
+  def to_es
+    {
+      name: self.name,
+      email: self.email,
+      birthdate: (I18n.l(self.birthdate) unless self.birthdate.blank?)
+    }
+  end
 #  def author
 #    'Jackson Pires'
 #  end
