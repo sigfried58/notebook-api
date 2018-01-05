@@ -1,6 +1,7 @@
 namespace :dev do
   desc 'Set up development environment'
   task setup: :environment do
+
     puts 'Add types of contacts...'
     kinds = %w(Amigo Comercial Conocido)
 
@@ -31,10 +32,19 @@ namespace :dev do
     
     Contact.all.each do |contact|
       Random.rand(5).times do |i|
-        contact.phones.create!(number:  Faker::PhoneNumber.cell_phone)
+        contact.phones.create!(number: Faker::PhoneNumber.cell_phone)
         contact.save!
       end
     end
     puts 'phones successfully added'
+
+    ###################################
+
+    puts 'Add address...'
+    
+    Contact.all.each do |contact|
+      Address.create(street: Faker::Address.street_address, city: Faker::Address.city, contact: contact)
+    end
+    puts 'address successfully added'
   end
 end
