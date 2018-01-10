@@ -21,6 +21,8 @@ gem 'devise_token_auth'
 gem 'devise-i18n'
 # Manage Procfile-based applications http://ddollar.github.com/foreman
 gem 'foreman'
+# A plugin for versioning Rails based RESTful APIs.
+gem 'versionist'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
