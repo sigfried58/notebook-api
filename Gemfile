@@ -18,6 +18,7 @@ gem 'puma', '~> 3.7'
 gem 'jwt'
 # Token based authentication for Rails JSON APIs. Designed to work with jToker and ng-token-auth.
 gem 'devise_token_auth'
+gem 'devise-i18n'
 # Manage Procfile-based applications http://ddollar.github.com/foreman
 gem 'foreman'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -25,7 +26,7 @@ gem 'foreman'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+# gem 'bcrypt', platform: :ruby
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

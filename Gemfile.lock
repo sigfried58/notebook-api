@@ -58,6 +58,8 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    devise-i18n (1.5.0)
+      devise (>= 3.4)
     devise_token_auth (0.1.42)
       devise (> 3.5.2, <= 4.3)
       rails (< 6)
@@ -152,7 +154,9 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  bcrypt
   byebug
+  devise-i18n
   devise_token_auth
   faker
   foreman
