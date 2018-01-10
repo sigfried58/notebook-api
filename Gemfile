@@ -26,7 +26,7 @@ gem 'versionist'
 # A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps
 gem 'kaminari'
 # Link header pagination for Rails and Grape APIs.
-gem 'api-pagination'
+# gem 'api-pagination'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production

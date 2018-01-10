@@ -1,6 +1,6 @@
 class Contact < ApplicationRecord
   # Kaminari
-  # paginates_per 10
+   paginates_per 10
 
   # Asociaciones
   belongs_to :kind #, optional: true
