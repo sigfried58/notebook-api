@@ -11,8 +11,10 @@ module V1
 
       @contacts = Contact.all.page(page_number).per(per_page)
 
-      expires_in 30.seconds, public: true
-      render json: @contacts #, methods: :birthdate_es # [:hello, :i18n]
+      # Cache-control ---- expires_in 30.seconds, public: true
+      if stale?(last_modified: @contacts[0].updated_at)
+        render json: @contacts #, methods: :birthdate_es # [:hello, :i18n]
+      end
       # paginate json: @contacts, per_page: 10 #, methods: :birthdate_es # [:hello, :i18n]
     end
 
