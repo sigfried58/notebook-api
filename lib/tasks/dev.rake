@@ -1,5 +1,3 @@
-require 'faker'
-
 namespace :dev do
   desc 'Set up development environment'
   task setup: :environment do
