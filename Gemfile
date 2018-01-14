@@ -11,7 +11,7 @@ gem 'rails', '~> 5.1.4'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff
 gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 # Postgresql
 gem 'pg'
 # Use Puma as the app server
