@@ -12,7 +12,7 @@ module V1
       @contacts = Contact.all.page(page_number).per(per_page)
 
       # Cache-control ---- expires_in 30.seconds, public: true
-      if stale?(last_modified: @contacts[0].updated_at)
+      if stale?(etag: @contacts)
         render json: @contacts #, methods: :birthdate_es # [:hello, :i18n]
       end
       # paginate json: @contacts, per_page: 10 #, methods: :birthdate_es # [:hello, :i18n]
@@ -20,7 +20,7 @@ module V1
 
     # GET /contacts/1
     def show
-      render json: @contact, include: [:kind, :address, :phones] #, meta: { author: 'Jimmy Ibanez' } #, include: [:kind, :phones, :address]  # .to_es
+      render json: @contact #, include: [:kind, :address, :phones] #, meta: { author: 'Jimmy Ibanez' } #, include: [:kind, :phones, :address]  # .to_es
     end
 
     # POST /contacts
