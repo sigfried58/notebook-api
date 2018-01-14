@@ -15,7 +15,7 @@ gem 'rails-i18n'
 #  Simple Rails app configuration
 gem 'figaro'
 # Postgresql
-gem 'pg', group: [:development, :test, :production]
+gem 'pg', '~> 0.11', group: [:development, :test, :production]
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # A pure ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
