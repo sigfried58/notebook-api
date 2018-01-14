@@ -12,6 +12,8 @@ gem 'rails', '~> 5.1.4'
 gem 'rails-i18n'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# Postgresql
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # A pure ruby implementation of the RFC 7519 OAuth JSON Web Token (JWT) standard.
