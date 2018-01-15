@@ -9,8 +9,9 @@ class AppName
       ['200', {'Content-Type' => 'text/html'}, ["Test!"]]
     else
       status, headers, response = @app.call(env)
+      response_body = (defined?(response.body).nil?) ? '' : response.body
       headers.merge!({'X-App-Name' => "#{@app_name}"})
-      [status, headers, [response.body]]
+      [status, headers, [response_body]]
     end
   end
 end
