@@ -59,6 +59,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   # Factory Bot Rails 
   gem 'factory_bot_rails'
+  # Collection of testing matchers extracted from Shoulda
+  gem 'shoulda-matchers', '~> 3.1'
 end
 
 group :development do
