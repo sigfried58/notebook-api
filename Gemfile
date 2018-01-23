@@ -47,6 +47,8 @@ gem 'rack-cors'
 gem 'active_model_serializers'
 # A library for generating fake data such as names, addresses, and phone numbers. 
 gem 'faker'
+# Code coverage for Ruby 1.9+ with a powerful configuration library and automatic merging of coverage across test suites
+gem 'simplecov', :require => false, :group => :test
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -55,6 +57,8 @@ group :development, :test do
   gem 'pry-rails'
   # RSpec for Rails-3+
   gem 'rspec-rails', '~> 3.7'
+  # Factory Bot Rails 
+  gem 'factory_bot_rails'
 end
 
 group :development do

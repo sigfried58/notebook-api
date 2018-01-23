@@ -1,5 +1,8 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+require 'simplecov'
 require 'spec_helper'
+SimpleCov.start 'rails'
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('../../config/environment', __FILE__)
 # Prevent database truncation if the environment is production
@@ -27,6 +30,8 @@ require 'rspec/rails'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  # FactoryBot
+  config.include FactoryBot::Syntax::Methods
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
