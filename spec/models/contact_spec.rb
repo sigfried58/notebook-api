@@ -24,5 +24,9 @@ RSpec.describe Contact, type: :model do
       contact = create(:contact)
       expect(contact.hello).to eq('Hola mundo')
     end
+    it '#i18n' do
+      contact = create(:contact)
+      expect(contact.i18n).to eq(:es)
+    end
   end
 end
