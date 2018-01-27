@@ -28,8 +28,8 @@ module V1
       @contact = Contact.new(contact_params)
 
       if @contact.save
-        render json: @contact, include: [:kind, :phones, :address],
-        status: :created, location: @contact
+        render json: @contact, #, include: [:kind, :phones, :address],
+        status: :created #, location: @contact
       else
         render json: ErrorSerializer.serialize(@contact.errors), status: :unprocessable_entity
       end
@@ -38,9 +38,9 @@ module V1
     # PATCH/PUT /contacts/1
     def update
       if @contact.update(contact_params)
-        render json: @contact, include: [:kind, :phones, :address]
+        render json: @contact #, include: [:kind, :phones, :address]
       else
-        render json: @contact.errors, status: :unprocessable_entity
+        render json: ErrorSerializer.serialize(@contact.errors), status: :unprocessable_entity
       end
     end
 
