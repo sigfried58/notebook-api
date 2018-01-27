@@ -61,6 +61,10 @@ group :development, :test do
   gem 'factory_bot_rails'
   # Collection of testing matchers extracted from Shoulda
   gem 'shoulda-matchers', '~> 3.1'
+  # Set of matchers and helpers to allow you test your APIs responses like a pro.
+  gem 'rspec-json_expectations'
+  # Validate your JSON APIs
+  gem 'json_matchers'
 end
 
 group :development do

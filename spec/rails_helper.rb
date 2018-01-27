@@ -1,6 +1,7 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'simplecov'
 require 'spec_helper'
+require "json_matchers/rspec"
 SimpleCov.start 'rails'
 
 ENV['RAILS_ENV'] ||= 'test'
@@ -32,6 +33,7 @@ ActiveRecord::Migration.maintain_test_schema!
 RSpec.configure do |config|
   # Devise
   config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.include Warden::Test::Helpers
 
   # Shoulda Matchers
   Shoulda::Matchers.configure do |config|
