@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+      "contact": {
+          "required": ["name", "email", "birthdate"],
+          "properties": {
+            "name": { "type": "string" },
+            "email": { "type": "string" },
+            "birthdate": { "type": "string", "format": "date-time" }
+          }
+        }
+    }
+}
